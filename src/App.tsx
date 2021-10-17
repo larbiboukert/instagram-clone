@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
+import HomeIcon from "@mui/icons-material/Home";
+import SearchIcon from "@mui/icons-material/Search";
+import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
+import LocalMallIcon from "@mui/icons-material/LocalMall";
 
 function App() {
+  const [activeNav, setActiveNav] = React.useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Box>
+      <Paper
+        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        elevation={3}
+      >
+        <BottomNavigation
+          showLabels
+          value={activeNav}
+          onChange={(event, newValue) => {
+            setActiveNav(newValue);
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <BottomNavigationAction icon={<HomeIcon />} />
+          <BottomNavigationAction icon={<SearchIcon />} />
+          <BottomNavigationAction icon={<OndemandVideoIcon />} />
+          <BottomNavigationAction icon={<LocalMallIcon />} />
+          <BottomNavigationAction icon={<FavoriteIcon />} />
+        </BottomNavigation>
+      </Paper>
+    </Box>
   );
 }
 
