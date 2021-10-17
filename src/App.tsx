@@ -6,7 +6,7 @@ import Paper from "@mui/material/Paper";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
-import LocalMallIcon from "@mui/icons-material/LocalMall";
+import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { Switch, Route, useLocation, useHistory } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/SearchPage";
@@ -41,18 +41,33 @@ function App() {
 
       <Paper
         sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-        elevation={3}
+        elevation={8}
       >
         <BottomNavigation
           showLabels
           value={location?.pathname}
           onChange={(e, value) => history.push(value)}
         >
-          <BottomNavigationAction icon={<HomeIcon />} value="/" />
-          <BottomNavigationAction icon={<SearchIcon />} value="/search" />
-          <BottomNavigationAction icon={<OndemandVideoIcon />} value="/reels" />
-          <BottomNavigationAction icon={<LocalMallIcon />} value="/shop" />
-          <BottomNavigationAction icon={<FavoriteIcon />} value="/profile" />
+          <BottomNavigationAction
+            icon={<HomeIcon fontSize="large" />}
+            value="/"
+          />
+          <BottomNavigationAction
+            icon={<SearchIcon fontSize="large" />}
+            value="/search"
+          />
+          <BottomNavigationAction
+            icon={<OndemandVideoIcon fontSize="large" />}
+            value="/reels"
+          />
+          <BottomNavigationAction
+            icon={<LocalMallOutlinedIcon fontSize="large" />}
+            value="/shop"
+          />
+          <BottomNavigationAction
+            icon={<FavoriteIcon fontSize="large" />}
+            value="/profile"
+          />
         </BottomNavigation>
       </Paper>
     </Box>
