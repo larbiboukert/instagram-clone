@@ -16,7 +16,13 @@ const HomePage = (props: Props) => {
     <Box>
       <AppBar color="transparent">
         <Toolbar sx={{ justifyContent: "space-between", paddingY: "8px" }}>
-          <img src="./ig-logo.png" alt="ig-logo" />
+          <img
+            src="./ig-logo.png"
+            alt="ig-logo"
+            style={{
+              height: "40px",
+            }}
+          />
           <Stack direction="row" sx={{ alignItems: "center" }}>
             <IconButton aria-label="new-post">
               <AddBoxOutlinedIcon fontSize="large" />
