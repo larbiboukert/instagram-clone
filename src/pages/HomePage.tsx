@@ -20,18 +20,18 @@ const HomePage = (props: Props) => {
             src="./ig-logo.png"
             alt="ig-logo"
             style={{
-              height: "40px",
+              height: "32px",
             }}
           />
           <Stack direction="row" sx={{ alignItems: "center" }}>
             <IconButton aria-label="new-post">
-              <AddBoxOutlinedIcon fontSize="large" />
+              <AddBoxOutlinedIcon />
             </IconButton>
             <IconButton aria-label="activity">
-              <FavoriteBorderOutlinedIcon fontSize="large" />
+              <FavoriteBorderOutlinedIcon />
             </IconButton>
             <IconButton aria-label="chat">
-              <ChatOutlinedIcon fontSize="large" />
+              <ChatOutlinedIcon />
             </IconButton>
           </Stack>
         </Toolbar>

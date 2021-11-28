@@ -38,26 +38,14 @@ function App() {
           value={location?.pathname}
           onChange={(e, value) => navigate(value)}
         >
+          <BottomNavigationAction icon={<HomeIcon />} value="/" />
+          <BottomNavigationAction icon={<SearchIcon />} value="/search" />
+          <BottomNavigationAction icon={<OndemandVideoIcon />} value="/reels" />
           <BottomNavigationAction
-            icon={<HomeIcon fontSize="large" />}
-            value="/"
-          />
-          <BottomNavigationAction
-            icon={<SearchIcon fontSize="large" />}
-            value="/search"
-          />
-          <BottomNavigationAction
-            icon={<OndemandVideoIcon fontSize="large" />}
-            value="/reels"
-          />
-          <BottomNavigationAction
-            icon={<LocalMallOutlinedIcon fontSize="large" />}
+            icon={<LocalMallOutlinedIcon />}
             value="/shop"
           />
-          <BottomNavigationAction
-            icon={<FavoriteIcon fontSize="large" />}
-            value="/profile"
-          />
+          <BottomNavigationAction icon={<FavoriteIcon />} value="/profile" />
         </BottomNavigation>
       </Paper>
     </Box>
