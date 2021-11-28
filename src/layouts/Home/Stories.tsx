@@ -10,6 +10,7 @@ const Stories = (props: Props) => {
       sx={{
         display: "flex",
         marginTop: "80px",
+        overflowX: "scroll",
       }}
     >
       {[
